@@ -1,0 +1,89 @@
+<html>
+<body bgcolor="Peachpuff">
+<SCRIPT LANGUAGE="JavaScript">
+function valid(form)
+{
+field1=form.courseno;
+field2=form.coursename;
+field3=form.amount;
+field4=form.duration;
+courseno=field1.value;
+coursename=field2.value;
+amount=field3.value;
+duration=field4.value;
+
+if(courseno.length==0)
+{
+alert("Courseno cannot be blank");
+field1.focus();
+return false;
+}
+else if(coursename.length==0)
+{
+alert("Coursename cannot be blank");
+field2.focus();
+return false;
+}
+else if(amount.length==0)
+{
+alert("Amount cannot be blank");
+field3.focus();
+return false;
+}
+else if(duration.length==0)
+{
+alert("Duration cannot be blank");
+field4.focus();
+return false;
+}
+}
+</SCRIPT>
+
+<h2><center><u>Course and fees details</u></center></h2>
+
+<form OnSubmit="return valid(this)" method="post" action="DBCourse1.jsp">
+<center>
+<table border=0>
+<tr>
+<td>
+	<table border=0>
+	<tr>
+		<td><h4>Course No:</h4></td><td><select name="courseno">
+										<option value="J001">J001</option>
+										<option value="Soft01">Soft01</option>
+										<option value="Call01">Call01</option>
+										<option value="Net01">Net01</option>
+										</select>
+		</td>
+	<tr>
+	<tr>
+		<td><h4>Course Name:</h4></td><td><select name="coursename">
+										   <option value="J2EE">J2EE</option>
+											<option value="Call Center">Call Center</option>
+											<option value="Software Testing">Software Testing</option>
+											<option value="Networking">Networking</option>
+											</select>
+		</td>
+	<tr>
+	<tr>
+		<td><h4>Amount:</h4></td><td><input type=text name="amount"></td>
+	<tr>
+	<tr>
+		<td><h4>Duration:</h4></td><td><select name="duration">
+										<option value="3 Months">3 Months</option>
+										<option value="2 Months">2 Months></option>
+										</select>
+		</td>
+	<tr>
+
+	</table>
+</td>
+</tr>
+</table>
+</center>
+<p><center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset"></center></p>
+</p>
+
+</form>
+</body>
+</html>

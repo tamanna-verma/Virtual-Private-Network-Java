@@ -1,0 +1,71 @@
+<html>
+<body bgcolor="Peachpuff">
+<SCRIPT LANGUAGE="JavaScript">
+function valid(form)
+{
+var field1=form.empno;
+var field2=form.empname;
+var field3=form.date;
+var field4=form.pay;
+empno=field1.value;
+empname=field2.value;
+date=field3.value;
+pay=field4.value;
+if(empno.length==0)
+{
+alert("Empno cannot be blank");
+field1.focus();
+return false;
+}
+else if(empname.length==0)
+{
+alert("Empname cannot be blank");
+field2.focus();
+return false;
+}
+else if(date.length==0)
+{
+alert("Date cannot be blank");
+field3.focus();
+return false;
+}
+else if(pay.length==0)
+{
+alert("Pay cannot be blank");
+field4.focus();
+return false;
+}
+}
+</SCRIPT>
+<form onsubmit="return valid(this)" method="post" action="DBSalary1.jsp">
+<br>
+<h2><center><u>Salary details</u></center></h2>
+<center>
+<table border=0>
+<tr>
+<td>
+	<table border=0>
+	<tr>
+		<td><h4>Emp No:</h4></td><td><input type=text name="empno"></td>
+	<tr>
+	<tr>
+		<td><h4>Emp Name:</h4></td><td><input type=text name="empname"></td>
+	<tr>
+	<tr>
+		<td><h4>Date of Joining:</h4></td><td><input type=text name="date"></td>
+	<tr>
+	<tr>
+		<td><h4>Pay:</h4></td><td><input type=text name="pay"></td>
+	<tr>
+
+	</table>
+</td>
+</tr>
+</table>
+</center>
+<p><center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset"></center></p>
+</p>
+
+</form>
+</body>
+</html>

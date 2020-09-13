@@ -1,0 +1,93 @@
+<html>
+<body bgcolor="Peachpuff">
+<SCRIPT LANGUAGE="JavaScript">
+function valid(form)
+{
+alert("hello");
+var field1=form.name;
+var field2=form.placement;
+var field3=form.company;
+var field4=form.person;
+var field5=form.date;
+name=field1.value;
+placement=field2.value;
+company=field3.value;
+person=field4.value;
+date=field5.value;
+
+if(name.length==0)
+{
+alert("name cannot be blank");
+field1.focus();
+return false;
+}
+else if(placement.length==0)
+{
+alert("placement cannot be blank");
+field2.focus();
+return false;
+}
+else if(company.length==0)
+{
+alert("company cannot be blank");
+field3.focus();
+return false;
+}
+else if(person.length==0)
+{
+alert("person cannot be blank");
+field4.focus();
+return false;
+}
+else if(date.length==0)
+{
+alert("Date cannot be blank");
+field5.focus();
+return false;
+}
+}
+</SCRIPT>
+
+
+<form OnSubmit="return valid(this)" method="post" action="addplacement.jsp">
+<br>
+<h2><center><u>Add Placement Form</u></center></h2>
+<center>
+<table>
+<tr>
+<td>
+	<table>
+	<tr>
+		<td><h4>Student Name:</h4></td><td><input type=text name="name"></td>
+	<tr>
+	<tr>
+		<td><h4>Placement:</h4></td><td><select name="placement">
+										<option value="J2EE">J2EE</option>
+										<option value="Software Testing">Software Testing</option>
+										<option value="Call Center">Call Center</option>
+										<option value="Networking">Networking</option>
+										</select>
+			</td>
+	<tr>
+	<tr>
+		<td><h4>Company:</h4></td><td><input type=text name="company"></td>
+	<tr>
+	<tr>
+		<td><h4>Contact Person:</h4></td><td><input type=text name="person"></td>
+	<tr>
+
+	<tr>
+		<td><h4>Placement Date:</h4></td><td><input type=text name="date"></td>
+
+
+	</table>
+</td>
+</tr>
+</table>
+</center>
+<p><center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset"></center></p>
+</p>
+
+</form>
+</body>
+</html>
